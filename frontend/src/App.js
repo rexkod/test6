@@ -1,51 +1,49 @@
-import { useEffect } from "react";
-import "@/App.css";
+import React, { useState, useEffect } from "react";
+import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { Toaster } from "./components/ui/toaster";
+import Home from "./pages/Home";
+import AllProducts from "./pages/AllProducts";
+import ProductDetail from "./pages/ProductDetail";
+import Cart from "./pages/Cart";
+import About from "./pages/About";
+import Business from "./pages/Business";
+import Startups from "./pages/Startups";
+import Blogs from "./pages/Blogs";
+import Contact from "./pages/Contact";
+import { getCartCount } from "./mockData";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+function App() {
+  const [cartCount, setCartCount] = useState(0);
 
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
+  const updateCartCount = () => {
+    setCartCount(getCartCount());
   };
 
   useEffect(() => {
-    helloWorldApi();
+    updateCartCount();
   }, []);
 
   return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
-
-function App() {
-  return (
     <div className="App">
       <BrowserRouter>
+        <Header cartCount={cartCount} />
         <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
+          <Route path="/" element={<Home onCartUpdate={updateCartCount} />} />
+          <Route path="/all-products" element={<AllProducts onCartUpdate={updateCartCount} />} />
+          <Route path="/product/:id" element={<ProductDetail onCartUpdate={updateCartCount} />} />
+          <Route path="/cart" element={<Cart onCartUpdate={updateCartCount} />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/business" element={<Business />} />
+          <Route path="/startups" element={<Startups />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blog/:slug" element={<Blogs />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer />
+        <Toaster />
       </BrowserRouter>
     </div>
   );
