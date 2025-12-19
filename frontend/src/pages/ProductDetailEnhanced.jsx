@@ -284,25 +284,45 @@ const ProductDetailEnhanced = ({ onCartUpdate }) => {
               </p>
             </div>
 
-            {/* B2B Pricing */}
-            {quantity >= 10 && (
-              <div className="mb-6 p-4 bg-orange-50 border-2 border-orange-500 rounded-lg">
+            {/* Pricing Information - B2C & B2B */}
+            <div className="mb-6 space-y-4">
+              {/* B2C Pricing */}
+              <div className={`p-4 border-2 rounded-lg ${quantity < 10 ? 'bg-blue-50 border-blue-500' : 'bg-gray-50 border-gray-300'}`}>
                 <div className="flex items-center space-x-2 mb-2">
-                  <Badge className="bg-orange-500 hover:bg-orange-600 text-white">B2B Pricing</Badge>
+                  <Badge className={quantity < 10 ? 'bg-blue-500 text-white' : 'bg-gray-500 text-white'}>B2C Pricing</Badge>
+                  <span className="text-sm font-medium text-gray-700">Individual Purchase</span>
+                </div>
+                <div className="flex items-baseline space-x-3">
+                  <span className={`text-2xl font-bold ${quantity < 10 ? 'text-blue-600' : 'text-gray-500'}`}>₹{product.salePrice.toLocaleString()}</span>
+                  <span className="text-sm text-gray-600">per unit</span>
+                </div>
+                {quantity < 10 && (
+                  <p className="text-sm text-gray-600 mt-2">
+                    Total: ₹{(product.salePrice * quantity).toLocaleString()} for {quantity} unit{quantity > 1 ? 's' : ''}
+                  </p>
+                )}
+              </div>
+
+              {/* B2B Pricing */}
+              <div className={`p-4 border-2 rounded-lg ${quantity >= 10 ? 'bg-orange-50 border-orange-500' : 'bg-gray-50 border-gray-300'}`}>
+                <div className="flex items-center space-x-2 mb-2">
+                  <Badge className={quantity >= 10 ? 'bg-orange-500 hover:bg-orange-600 text-white' : 'bg-gray-500 text-white'}>B2B Pricing</Badge>
                   <span className="text-sm font-medium text-orange-700">MOQ: 10 units</span>
                 </div>
                 <div className="flex items-baseline space-x-3">
-                  <span className="text-3xl font-bold text-orange-600">₹{(product.salePrice * 0.85).toLocaleString()}</span>
+                  <span className={`text-2xl font-bold ${quantity >= 10 ? 'text-orange-600' : 'text-gray-500'}`}>₹{(product.salePrice * 0.85).toLocaleString()}</span>
                   <span className="text-sm text-gray-600">per unit</span>
-                  <Badge variant="secondary" className="bg-orange-100 text-orange-700">
+                  <Badge variant="secondary" className={quantity >= 10 ? 'bg-orange-100 text-orange-700' : 'bg-gray-200 text-gray-500'}>
                     15% additional off
                   </Badge>
                 </div>
-                <p className="text-sm text-gray-600 mt-2">
-                  Total: ₹{((product.salePrice * 0.85) * quantity).toLocaleString()} for {quantity} units
-                </p>
+                {quantity >= 10 && (
+                  <p className="text-sm text-gray-600 mt-2">
+                    Total: ₹{((product.salePrice * 0.85) * quantity).toLocaleString()} for {quantity} units
+                  </p>
+                )}
               </div>
-            )}
+            </div>
 
             {/* Quantity and Actions */}
             <div className="mb-6">
