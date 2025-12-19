@@ -6,6 +6,7 @@ export const products = [
     name: "Dell OptiPlex 3020 Desktop | Intel i5 4th Gen | Windows 10 | Refurbished",
     brand: "Dell",
     category: "Desktops",
+    condition: "refurbished",
     image: "https://images.pexels.com/photos/572056/pexels-photo-572056.jpeg",
     originalPrice: 79999,
     salePrice: 8500,
@@ -17,6 +18,7 @@ export const products = [
       processor: "Intel i5 4th Gen",
       ram: "8GB DDR3",
       storage: "500GB HDD",
+      screen: "Desktop",
       os: "Windows 10"
     }
   },
