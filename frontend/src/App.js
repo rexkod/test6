@@ -17,6 +17,7 @@ import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Profile from "./pages/Profile";
+import OrderDetail from "./pages/OrderDetail";
 import { getCartCount } from "./mockData";
 
 function App() {
