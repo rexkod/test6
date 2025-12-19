@@ -6,13 +6,17 @@ import Footer from "./components/Footer";
 import { Toaster } from "./components/ui/toaster";
 import Home from "./pages/Home";
 import AllProducts from "./pages/AllProducts";
-import ProductDetail from "./pages/ProductDetail";
+import ProductDetailEnhanced from "./pages/ProductDetailEnhanced";
 import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 import About from "./pages/About";
 import Business from "./pages/Business";
 import Startups from "./pages/Startups";
 import Blogs from "./pages/Blogs";
 import Contact from "./pages/Contact";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Profile from "./pages/Profile";
 import { getCartCount } from "./mockData";
 
 function App() {
@@ -33,14 +37,18 @@ function App() {
         <Routes>
           <Route path="/" element={<Home onCartUpdate={updateCartCount} />} />
           <Route path="/all-products" element={<AllProducts onCartUpdate={updateCartCount} />} />
-          <Route path="/product/:id" element={<ProductDetail onCartUpdate={updateCartCount} />} />
+          <Route path="/product/:id" element={<ProductDetailEnhanced onCartUpdate={updateCartCount} />} />
           <Route path="/cart" element={<Cart onCartUpdate={updateCartCount} />} />
+          <Route path="/checkout" element={<Checkout onCartUpdate={updateCartCount} />} />
           <Route path="/about" element={<About />} />
           <Route path="/business" element={<Business />} />
           <Route path="/startups" element={<Startups />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blog/:slug" element={<Blogs />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
         <Footer />
         <Toaster />
