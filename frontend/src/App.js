@@ -40,6 +40,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home onCartUpdate={updateCartCount} />} />
           <Route path="/all-products" element={<AllProducts onCartUpdate={updateCartCount} />} />
+          <Route path="/refurbished-laptops" element={<RefurbishedLaptops onCartUpdate={updateCartCount} />} />
+          <Route path="/new-laptops" element={<NewLaptops onCartUpdate={updateCartCount} />} />
           <Route path="/product/:id" element={<ProductDetailEnhanced onCartUpdate={updateCartCount} />} />
           <Route path="/cart" element={<Cart onCartUpdate={updateCartCount} />} />
           <Route path="/checkout" element={<Checkout onCartUpdate={updateCartCount} />} />
