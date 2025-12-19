@@ -16,6 +16,11 @@ const ProductCard = ({ product, onAddToCart }) => {
     <Link to={`/product/${product.id}`}>
       <Card className="group hover:shadow-lg transition-all duration-300 overflow-hidden h-full">
         <CardContent className="p-4">
+          {/* Condition Badge */}
+          <Badge className={`mb-2 ${product.condition === 'new' ? 'bg-blue-600 hover:bg-blue-700' : 'bg-orange-500 hover:bg-orange-600'} text-white`}>
+            {product.condition === 'new' ? 'Brand New' : 'Refurbished'}
+          </Badge>
+          
           {/* Extra Off Badge */}
           {product.extraOff && (
             <Badge className="bg-green-500 hover:bg-green-600 mb-2">
