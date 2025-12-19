@@ -342,7 +342,7 @@ const ProductDetailEnhanced = ({ onCartUpdate }) => {
                 </Button>
                 <Button
                   onClick={handleBuyNow}
-                  className="flex-1 bg-bright-600 hover:bg-bright-700 text-white py-6 text-lg"
+                  className="flex-1 bg-black hover:bg-gray-800 text-white py-6 text-lg"
                 >
                   BUY NOW
                 </Button>

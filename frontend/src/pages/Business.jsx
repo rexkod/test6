@@ -17,7 +17,7 @@ const Business = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
-              <Button className="bg-bright-600 hover:bg-bright-700 text-white px-8 py-6 text-lg">
+              <Button className="bg-black hover:bg-gray-800 text-white px-8 py-6 text-lg">
                 Request Bulk Quote
               </Button>
             </Link>
@@ -181,7 +181,7 @@ const Business = () => {
           <h2 className="text-3xl font-bold mb-6">Ready to Equip Your Team?</h2>
           <p className="text-xl text-gray-600 mb-8">Get in touch with us for a customized quote</p>
           <Link to="/contact">
-            <Button className="bg-bright-600 hover:bg-bright-700 text-white px-8 py-6 text-lg">
+            <Button className="bg-black hover:bg-gray-800 text-white px-8 py-6 text-lg">
               Contact Sales
             </Button>
           </Link>

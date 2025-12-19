@@ -46,7 +46,7 @@ const Cart = ({ onCartUpdate }) => {
             <h2 className="text-3xl font-bold mb-4">Your cart is empty</h2>
             <p className="text-gray-600 mb-8">Looks like you haven't added any products yet</p>
             <Link to="/all-products">
-              <Button className="bg-bright-600 hover:bg-bright-700 text-white">
+              <Button className="bg-black hover:bg-gray-800 text-white">
                 Start Shopping
               </Button>
             </Link>
@@ -175,7 +175,7 @@ const Cart = ({ onCartUpdate }) => {
 
               <Button
                 onClick={handleCheckout}
-                className="w-full bg-bright-600 hover:bg-bright-700 text-white py-6 text-lg"
+                className="w-full bg-black hover:bg-gray-800 text-white py-6 text-lg"
               >
                 Proceed to Checkout
               </Button>

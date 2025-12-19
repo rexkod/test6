@@ -64,7 +64,7 @@ const Blogs = () => {
                 <h2 className="text-3xl font-bold mb-4">{allBlogs[0].title}</h2>
                 <p className="text-gray-600 mb-6 leading-relaxed">{allBlogs[0].excerpt}</p>
                 <Link to={`/blog/${allBlogs[0].slug}`}>
-                  <Button className="bg-bright-600 hover:bg-bright-700 text-white">
+                  <Button className="bg-black hover:bg-gray-800 text-white">
                     Read More <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>

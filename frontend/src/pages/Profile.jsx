@@ -88,7 +88,7 @@ const Profile = () => {
                       <h3 className="text-xl font-bold mb-2">No orders yet.</h3>
                       <p className="text-gray-600 mb-6">Start shopping to see your orders here</p>
                       <Link to="/all-products">
-                        <Button className="bg-bright-600 hover:bg-bright-700 text-white">
+                        <Button className="bg-black hover:bg-gray-800 text-white">
                           Start Shopping
                         </Button>
                       </Link>
@@ -115,7 +115,7 @@ const Profile = () => {
                     </div>
                     <h3 className="text-xl font-bold mb-2">No addresses found</h3>
                     <p className="text-gray-600 mb-6">Add a delivery address</p>
-                    <Button className="bg-bright-600 hover:bg-bright-700 text-white">
+                    <Button className="bg-black hover:bg-gray-800 text-white">
                       Add Address
                     </Button>
                   </CardContent>

@@ -109,7 +109,7 @@ const Checkout = ({ onCartUpdate }) => {
                     <p className="text-gray-600 mb-6">Add a delivery address to proceed</p>
                     <Dialog open={showAddressForm} onOpenChange={setShowAddressForm}>
                       <DialogTrigger asChild>
-                        <Button className="bg-bright-600 hover:bg-bright-700 text-white">
+                        <Button className="bg-black hover:bg-gray-800 text-white">
                           <Plus className="w-4 h-4 mr-2" />
                           Add Address
                         </Button>
@@ -215,7 +215,7 @@ const Checkout = ({ onCartUpdate }) => {
                             <Button type="button" variant="outline" onClick={() => setShowAddressForm(false)}>
                               Cancel
                             </Button>
-                            <Button type="submit" className="bg-bright-600 hover:bg-bright-700 text-white">
+                            <Button type="submit" className="bg-black hover:bg-gray-800 text-white">
                               Save Address
                             </Button>
                           </div>
@@ -335,7 +335,7 @@ const Checkout = ({ onCartUpdate }) => {
                               <Button type="button" variant="outline" onClick={() => setShowAddressForm(false)}>
                                 Cancel
                               </Button>
-                              <Button type="submit" className="bg-bright-600 hover:bg-bright-700 text-white">
+                              <Button type="submit" className="bg-black hover:bg-gray-800 text-white">
                                 Save Address
                               </Button>
                             </div>
@@ -434,7 +434,7 @@ const Checkout = ({ onCartUpdate }) => {
 
                 <Button
                   onClick={handleProceed}
-                  className="w-full bg-bright-600 hover:bg-bright-700 text-white py-6"
+                  className="w-full bg-black hover:bg-gray-800 text-white py-6"
                   disabled={addresses.length === 0}
                 >
                   Proceed

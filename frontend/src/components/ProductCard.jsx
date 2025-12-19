@@ -72,7 +72,7 @@ const ProductCard = ({ product, onAddToCart }) => {
           {/* Add to Cart Button */}
           <Button
             onClick={handleAddToCart}
-            className="w-full bg-bright-600 hover:bg-bright-700 text-white"
+            className="w-full bg-black hover:bg-gray-800 text-white"
           >
             <ShoppingCart className="w-4 h-4 mr-2" />
             Add to cart

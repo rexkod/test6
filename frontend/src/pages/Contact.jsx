@@ -88,7 +88,7 @@ const Contact = () => {
                       placeholder="How can we help you?"
                     />
                   </div>
-                  <Button type="submit" className="w-full bg-bright-600 hover:bg-bright-700 text-white py-6 text-lg">
+                  <Button type="submit" className="w-full bg-black hover:bg-gray-800 text-white py-6 text-lg">
                     Send Message
                   </Button>
                 </form>
