@@ -101,9 +101,11 @@ const Header = ({ cartCount = 0 }) => {
               </Button>
             </Link>
 
-            <Button variant="ghost" size="icon" className="rounded-full">
-              <User className="w-5 h-5" />
-            </Button>
+            <Link to="/profile">
+              <Button variant="ghost" size="icon" className="rounded-full">
+                <User className="w-5 h-5" />
+              </Button>
+            </Link>
 
             {/* Mobile Menu Toggle */}
             <button
