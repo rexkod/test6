@@ -6,6 +6,8 @@ import Footer from "./components/Footer";
 import { Toaster } from "./components/ui/toaster";
 import Home from "./pages/Home";
 import AllProducts from "./pages/AllProducts";
+import RefurbishedLaptops from "./pages/RefurbishedLaptops";
+import NewLaptops from "./pages/NewLaptops";
 import ProductDetailEnhanced from "./pages/ProductDetailEnhanced";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
