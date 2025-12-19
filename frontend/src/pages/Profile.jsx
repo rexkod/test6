@@ -28,7 +28,7 @@ const Profile = () => {
             <Card>
               <CardContent className="p-6">
                 <div className="flex flex-col items-center text-center mb-6">
-                  <div className="w-32 h-32 bg-black rounded-full flex items-center justify-center mb-4">
+                  <div className="w-32 h-32 bg-gradient-to-br from-bright-500 to-bright-700 rounded-full flex items-center justify-center mb-4">
                     <User className="w-16 h-16 text-white" />
                   </div>
                   <h2 className="text-2xl font-bold mb-2">{user.name}</h2>
