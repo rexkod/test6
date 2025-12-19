@@ -114,7 +114,7 @@ const Signup = () => {
                 </p>
               </div>
 
-              <Button type="submit" className="w-full bg-black hover:bg-gray-800 text-white py-6">
+              <Button type="submit" className="w-full bg-bright-600 hover:bg-bright-700 text-white py-6">
                 Create Account
               </Button>
             </form>
