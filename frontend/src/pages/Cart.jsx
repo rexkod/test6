@@ -31,11 +31,7 @@ const Cart = ({ onCartUpdate }) => {
   };
 
   const handleCheckout = () => {
-    toast({
-      title: "Checkout",
-      description: "Proceeding to checkout...",
-    });
-    // In a real app, this would navigate to checkout
+    navigate('/checkout');
   };
 
   const total = getCartTotal();
