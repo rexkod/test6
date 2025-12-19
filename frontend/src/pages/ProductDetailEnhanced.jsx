@@ -286,15 +286,15 @@ const ProductDetailEnhanced = ({ onCartUpdate }) => {
 
             {/* B2B Pricing */}
             {quantity >= 10 && (
-              <div className="mb-6 p-4 bg-bright-50 border-2 border-bright-500 rounded-lg">
+              <div className="mb-6 p-4 bg-orange-50 border-2 border-orange-500 rounded-lg">
                 <div className="flex items-center space-x-2 mb-2">
-                  <Badge className="bg-bright-500 hover:bg-black">B2B Pricing</Badge>
-                  <span className="text-sm font-medium text-bright-700">MOQ: 10 units</span>
+                  <Badge className="bg-orange-500 hover:bg-orange-600 text-white">B2B Pricing</Badge>
+                  <span className="text-sm font-medium text-orange-700">MOQ: 10 units</span>
                 </div>
                 <div className="flex items-baseline space-x-3">
-                  <span className="text-3xl font-bold text-black">₹{(product.salePrice * 0.85).toLocaleString()}</span>
+                  <span className="text-3xl font-bold text-orange-600">₹{(product.salePrice * 0.85).toLocaleString()}</span>
                   <span className="text-sm text-gray-600">per unit</span>
-                  <Badge variant="secondary" className="bg-bright-100 text-bright-700">
+                  <Badge variant="secondary" className="bg-orange-100 text-orange-700">
                     15% additional off
                   </Badge>
                 </div>
