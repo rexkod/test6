@@ -104,6 +104,63 @@ const Signup = () => {
                 />
               </div>
 
+              {/* Business Checkbox */}
+              <div className="flex items-start space-x-2 p-4 bg-gray-50 rounded-lg">
+                <input 
+                  type="checkbox" 
+                  className="mt-1 rounded" 
+                  checked={formData.isBusiness}
+                  onChange={(e) => setFormData({...formData, isBusiness: e.target.checked})}
+                />
+                <div>
+                  <p className="font-medium text-sm">Are you a business?</p>
+                  <p className="text-xs text-gray-600">Check this if you're registering for bulk purchases (B2B)</p>
+                </div>
+              </div>
+
+              {/* Business Fields - Show only when business is checked */}
+              {formData.isBusiness && (
+                <div className="space-y-4 p-4 bg-orange-50 border border-orange-200 rounded-lg">
+                  <h3 className="font-semibold text-sm text-orange-800">Business Information</h3>
+                  
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Business Name *</label>
+                    <Input
+                      type="text"
+                      name="businessName"
+                      value={formData.businessName}
+                      onChange={handleChange}
+                      placeholder="Enter your business name"
+                      className="w-full"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium mb-2">GST Number *</label>
+                    <Input
+                      type="text"
+                      name="gstNumber"
+                      value={formData.gstNumber}
+                      onChange={handleChange}
+                      placeholder="Enter GST number (e.g., 29AAJCK8673K1ZN)"
+                      className="w-full"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Business Address *</label>
+                    <Input
+                      type="text"
+                      name="businessAddress"
+                      value={formData.businessAddress}
+                      onChange={handleChange}
+                      placeholder="Enter complete business address"
+                      className="w-full"
+                    />
+                  </div>
+                </div>
+              )}
+
               <div className="flex items-start space-x-2">
                 <input type="checkbox" className="mt-1 rounded" />
                 <p className="text-xs text-gray-600">
