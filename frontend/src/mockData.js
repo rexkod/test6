@@ -254,6 +254,132 @@ export const products = [
       screen: "21.5\" 4K",
       os: "macOS"
     }
+  },
+  {
+    id: 13,
+    name: "Dell Inspiron 15 | Intel i7 12th Gen | 16GB RAM | 512GB SSD | New",
+    brand: "Dell",
+    category: "Windows",
+    condition: "new",
+    image: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed",
+    originalPrice: 78990,
+    salePrice: 72990,
+    discount: 8,
+    rating: 4.8,
+    reviews: 42,
+    verified: true,
+    specs: {
+      processor: "Intel i7 12th Gen",
+      ram: "16GB DDR4",
+      storage: "512GB SSD",
+      screen: "15.6\" FHD",
+      os: "Windows 11"
+    }
+  },
+  {
+    id: 14,
+    name: "HP Pavilion 14 | AMD Ryzen 5 | 8GB RAM | 256GB SSD | New",
+    brand: "HP",
+    category: "Windows",
+    condition: "new",
+    image: "https://images.pexels.com/photos/18105/pexels-photo.jpg",
+    originalPrice: 54990,
+    salePrice: 49990,
+    discount: 9,
+    rating: 4.7,
+    reviews: 35,
+    verified: true,
+    specs: {
+      processor: "AMD Ryzen 5",
+      ram: "8GB DDR4",
+      storage: "256GB SSD",
+      screen: "14\" FHD",
+      os: "Windows 11"
+    }
+  },
+  {
+    id: 15,
+    name: "Apple MacBook Air M2 | 8GB RAM | 256GB SSD | New",
+    brand: "Apple",
+    category: "Macbooks",
+    condition: "new",
+    image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+    originalPrice: 114900,
+    salePrice: 109900,
+    discount: 4,
+    rating: 4.9,
+    reviews: 68,
+    verified: true,
+    specs: {
+      processor: "Apple M2",
+      ram: "8GB",
+      storage: "256GB SSD",
+      screen: "13.6\" Retina",
+      os: "macOS"
+    }
+  },
+  {
+    id: 16,
+    name: "Lenovo IdeaPad Slim 3 | Intel i5 11th Gen | 8GB RAM | 512GB SSD | New",
+    brand: "Lenovo",
+    category: "Windows",
+    condition: "new",
+    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+    originalPrice: 62990,
+    salePrice: 57990,
+    discount: 8,
+    rating: 4.6,
+    reviews: 28,
+    verified: true,
+    specs: {
+      processor: "Intel i5 11th Gen",
+      ram: "8GB DDR4",
+      storage: "512GB SSD",
+      screen: "15.6\" FHD",
+      os: "Windows 11"
+    }
+  },
+  {
+    id: 17,
+    name: "ASUS VivoBook 15 | AMD Ryzen 7 | 16GB RAM | 512GB SSD | New",
+    brand: "Asus",
+    category: "Windows",
+    condition: "new",
+    image: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
+    originalPrice: 69990,
+    salePrice: 64990,
+    discount: 7,
+    rating: 4.7,
+    reviews: 31,
+    verified: true,
+    specs: {
+      processor: "AMD Ryzen 7",
+      ram: "16GB DDR4",
+      storage: "512GB SSD",
+      screen: "15.6\" FHD",
+      os: "Windows 11"
+    }
+  },
+  {
+    id: 18,
+    name: "Apple MacBook Pro 14 M3 | 16GB RAM | 512GB SSD | New",
+    brand: "Apple",
+    category: "Macbooks",
+    condition: "new",
+    image: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9",
+    originalPrice: 169900,
+    salePrice: 164900,
+    discount: 3,
+    rating: 5.0,
+    reviews: 89,
+    verified: true,
+    specs: {
+      processor: "Apple M3",
+      ram: "16GB",
+      storage: "512GB SSD",
+      screen: "14\" Liquid Retina XDR",
+      os: "macOS"
+    }
   }
 ];
 
