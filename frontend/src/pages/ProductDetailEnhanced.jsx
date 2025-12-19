@@ -98,11 +98,16 @@ const ProductDetailEnhanced = ({ onCartUpdate }) => {
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           {/* Product Images */}
           <div>
-            {product.verified && (
-              <Badge className="bg-green-500 hover:bg-green-600 mb-4">
-                In Stock
+            <div className="flex items-center space-x-2 mb-4">
+              <Badge className={`${product.condition === 'new' ? 'bg-blue-600 hover:bg-blue-700' : 'bg-orange-500 hover:bg-orange-600'} text-white text-base py-1.5 px-4`}>
+                {product.condition === 'new' ? 'Brand New' : 'Certified Refurbished'}
               </Badge>
-            )}
+              {product.verified && (
+                <Badge className="bg-green-500 hover:bg-green-600">
+                  In Stock
+                </Badge>
+              )}
+            </div>
             
             {/* Main Image */}
             <div className="aspect-square rounded-2xl overflow-hidden bg-gray-100 mb-4">
